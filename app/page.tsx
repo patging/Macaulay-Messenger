@@ -7,7 +7,6 @@ export default function page() {
     return ( 
         <>
         <Header />
-        <h1 className="font-sans hover:font-serif">Hello, World!</h1>        
         </>
 
     );
