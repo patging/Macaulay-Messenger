@@ -11,8 +11,15 @@ export default function page() {
     return ( 
         <>
         <script src="https://cdn.tailwindcss.com"></script>
-        <ArticleThumbnail/>
-        <Header />
+        
+        <Header/>
+        <div className="grid grid-cols-3 divide-x">
+            <div><ArticleThumbnail/></div>
+            <div><ArticleThumbnail/></div>
+            <div><ArticleThumbnail/></div>
+        </div>
+        
+        <div className="border border-gray-200"></div>
         <h1 className="font-sans hover:font-serif">Hello, World!</h1>        
         </>
 
