@@ -10,8 +10,9 @@ import ArticleThumbnail from '../components/ArticleThumbnail'
 export default function page() {
     return ( 
         <>
+
         <script src="https://cdn.tailwindcss.com"></script>
-        
+    
         <Header/>
         <div className="grid grid-cols-3 divide-x">
             <div><ArticleThumbnail/></div>
