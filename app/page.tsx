@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../styles/globals.css"
+import "../styles/global.css"
 
 import Header from "../components/Header"
 
