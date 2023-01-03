@@ -1,0 +1,4 @@
+/* 
+    This is for filling up the test.sqlite file only 
+    If you want to refill it you can run clearTestDB.js and then run this again
+*/

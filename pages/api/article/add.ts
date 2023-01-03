@@ -13,12 +13,11 @@ export default async function handler(
         const prisma = new PrismaClient();
         // data validation
 		if(! req.query["title"] || ! req.query["content"] || ! req.query["authorID"]) {
-            res.status(400).json({message: `Error: Bad request query`});
+            res.status(400).json({message: `Error: Bad request body`});
 
         } else {
-            
             // validating the authorID
-            const user = await prisma.userpass.findUnique({
+            const user = await prisma.articles.findUnique({
                 where: {
                     id : parseInt(req.query['authorID'] as string)
                 },
@@ -29,7 +28,7 @@ export default async function handler(
             }
 
             // inserting into db
-            const art = await prisma.articles.create({
+            await prisma.articles.create({
                 data : {
                     Title : req.query["title"] as string,
                     content : req.query["content"] as string,

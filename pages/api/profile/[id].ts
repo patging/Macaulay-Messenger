@@ -32,12 +32,12 @@ export default async function handler(
 		});
 		if (! article) {
 			// article is null b/c nothing meets the query
-			res.status(200).json({});
+			res.status(200).json({success : true, results : {}});
 		} else {
-			res.status(200).json(article); 
+			res.status(200).json({success : true, results : article}); 
 		}	
 	} else {
-     res.status(400).json({message : "Error: bad request"});
+     res.status(400).json({success : false, message : "Error: bad request"});
    }
 
 }
