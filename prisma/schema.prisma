@@ -17,7 +17,7 @@ model Articles {
 
 model Userpass {
   id       Int        @id @default(autoincrement())
-  name     String
+  name     String     @unique
   password String
   Articles Articles[]
 }
