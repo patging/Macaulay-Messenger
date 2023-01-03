@@ -8,12 +8,7 @@ import { PrismaClient } from '@prisma/client'
 
     schema in prisma/schema.prisma
     
-    model Userpass {
-    id       Int        @id @default(autoincrement())
-    name     String
-    password String
-    Articles Articles[]
-    }
+\
 */
 export default async function handler(
   req: NextApiRequest,
