@@ -9,9 +9,9 @@ const ArticleThumbnail = () => {
           
           <div className="relative bg-white p-6">
               <div className="space-y-2">
-                <a href="yomama"><img src="https://media.zenfs.com/en/the_independent_635/52b7f58b061c788cf93123e099974227" alt=""/></a>
+                <a href="blank"><img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/youtube-thumbnail-design-template-bd73c9b9180d60c8d677aae7e7495d7f_screen.jpg?ts=1593284625" alt=""/></a>
                 
-                <a href="yodaday" className="text-2xl font-bold text-slate-800">Article Name</a>
+                <a href="blank" className="text-2xl font-bold text-slate-800">Article Name</a>
 
                 <p className="text-sm font-semibold text-slate-800"><a href = "">Type</a></p>
                 <p className="text-base text-slate-800">Blah Blah Blah I Am a Government Drone Repeating Popular Opinions</p>
