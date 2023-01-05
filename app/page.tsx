@@ -8,22 +8,28 @@ import Footer from '../components/footer'
 import SideTab from '../components/sideTab_MastHead'
 
 /* 
+    /
 
+    Homepage for the Macaulay Messenger site
 */
 export default async function page() {
+    const resp  = await fetch(`http://localhost:3000/api/article/getNewArticles?numArticles=${9}`,
+      {
+        method: "POST",
+      }
+    ); 
+    const resp_json  = await resp.json();
+    const articles =  resp_json['articles'];
 
-    let a : Array<mastHeadBody> = await fetch("localhost:3000/api/article/getNewArticles", {
-      method : "POST",
-      body: JSON.stringify({numArticles : 9}),
-    });
+    //console.log(   articles[0])
 
     return ( 
         <>
          <script src="https://cdn.tailwindcss.com"></script>
           <Header/>
           <section className="flex flex-row divide-x-2 divide-gray-200">
-            <div className="basis-3/4"><MastHead {... [a.slice(0,5)]}/></div>
-            <div className="basis-1/4"><SideTab {... [a.slice(5,9)]}/></div>
+            <div className="basis-3/4"><MastHead articles={articles.slice(0,5)}/></div>
+            <div className="basis-1/4"><SideTab  articles={articles.slice(5,9)}/></div>
           </section>
           <Footer/>
         </>

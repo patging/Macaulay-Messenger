@@ -4,10 +4,10 @@ import "../styles/links.css"
 import {articleBody, ArticleThumbnail} from '../components/ArticleThumbnail'
 
 export interface mastHeadBody {
-    articles : Array<articleBody>,
+    articles : articleBody[],
 }
 
-const MastHead = ({articles} : mastHeadBody) => {
+export const MastHead = ({articles} : mastHeadBody) => {
     return(
     <section id="homePageContent" className="place-content-center gap-4 divide-x-2 divide-gray-200">
         <div className="gap-25 divide-y divide-gray-200">
@@ -28,5 +28,3 @@ const MastHead = ({articles} : mastHeadBody) => {
     )
     
 }
-
-export default MastHead;

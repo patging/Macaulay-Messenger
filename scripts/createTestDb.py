@@ -1,6 +1,8 @@
+#!/usr/bin/python3
 import subprocess
 import sqlite3
 from faker import Faker 
+from os.path import exists
 
 def main():
     '''
@@ -9,27 +11,30 @@ def main():
     Initializes a test.sqlite file and fills the two tables
     with dummy data via faker.
 
-    This does require that test.sqlite doesn't alr exist
+    This does not require that test.sqlite doesn't alr exist
 
     You must install the requirements.txt and run this manually
     from scripts folder
     '''
 
-    try:    
-        #some shell scripts just for simplicity
-        subprocess.run("touch ../prisma/test.sqlite")
-    except (e):
-        print(f'Error at touch test.sqlite. Check if the file doesnt alr exist or that sqlite3 exists on your pc. Error : {e}')
+    if not exists("../prisma/test.sqlite") :
+        try:            
+            #some shell scripts just for simplicity
+            subprocess.run("touch ../prisma/test.sqlite")
+        except (e):
+            print(f'Error at touch test.sqlite. Check if the file doesnt alr exist or that sqlite3 exists on your pc. Error : {e}')
 
     #initializing sqlite3 connection
     conn = sqlite3.connect("../prisma/test.sqlite")
     cursor = conn.cursor()
 
     #initalizing SQLite DB
-    with open("../prisma/create.sql", "r") as f:
-        sql = f.read()
-        for command in sql.split(';'):
-            cursor.execute(command)
+
+    if not exists("../prisma/test.sqlite") :
+        with open("../prisma/create.sql", "r") as f:
+            sql = f.read()
+            for command in sql.split(';'):
+                cursor.execute(command)
 
     fake = Faker() #intiializing faker instance
 
