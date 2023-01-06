@@ -33,6 +33,5 @@ export default async function page() {
           </section>
           <Footer/>
         </>
-
-    );
+        );
 }

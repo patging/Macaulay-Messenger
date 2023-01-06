@@ -17,7 +17,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
-
    if (req.method == "POST") {
         if(! req.query["numArticles"]) {
             res.status(422).json({success : false, message : "Error : bad request body"});
