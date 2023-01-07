@@ -3,8 +3,8 @@ import React from 'react'
 import "../styles/global.css"
 
 import Header from "../components/Header"
-import { mastHeadBody, MastHead} from '../components/masthead'
 import Footer from '../components/footer'
+import { mastHeadBody, MastHead} from '../components/masthead'
 import SideTab from '../components/sideTab_MastHead'
 
 /* 
