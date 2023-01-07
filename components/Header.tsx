@@ -7,7 +7,8 @@ import NavButton from "./NavButton"
 const Header = () => {
     // in regards to the hamburger menu
     const [isOpen, setIsOpen] = useState(false);
-    const windowSize = useRef([window.innerWidth]);
+    const windowHeight = useRef(window.innerWidth ); // width of the window we're in 
+
     // dummy data
     let links = [
         {link: "", text: "Hunter College"},
@@ -22,7 +23,7 @@ const Header = () => {
     return ( 
         <>
             <div className='flex  mt-5 mb-5'>   
-                <div className=" inline sm:hidden" onClick={() => {setIsOpen(!isOpen);} }>
+                <div className={`inline md:hidden`} onClick={() => {setIsOpen(!isOpen);} }>
                     {/* Hamburger and X Icon from heroicons.com*/}
                     {isOpen? 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-7 h-7">

@@ -13,12 +13,12 @@ export const MastHead = ({articles} : mastHeadBody) => {
         <div className="gap-25 divide-y divide-gray-200">
             <div><ArticleThumbnail {...articles[0]}/></div> 
 
-            <div className="flex flex-row">  
+            <div className="flex flex-col md:flex-row">  
                 <div className ="basis 1/2"><ArticleThumbnail {...articles[1]}/></div>
                 <div className="basis 1/2"><ArticleThumbnail {...articles[2]}/></div>
             </div>
 
-            <div className="flex flex-row">
+            <div className="flex flex-col md:flex-row">
                 <div className ="basis 1/2"><ArticleThumbnail {...articles[3]}/></div>
                 <div className="basis 1/2"><ArticleThumbnail {...articles[4]}/></div>
             </div>

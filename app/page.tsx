@@ -27,7 +27,7 @@ export default async function page() {
         <>
          <script src="https://cdn.tailwindcss.com"></script>
           <Header/>
-          <section className="flex flex-row divide-x-2 divide-gray-200">
+          <section className=" flex flex-col  lg:flex-row divide-x-2 divide-gray-200">
             <div className="basis-3/4"><MastHead articles={articles.slice(0,5)}/></div>
             <div className="basis-1/4"><SideTab  articles={articles.slice(5,9)}/></div>
           </section>
