@@ -32,7 +32,7 @@ export const ArticleThumbnail = ({Title, description, section, content, authorID
        
               
                 <p className="text-base text-slate-800">{ description }</p>
-
+                
                 <div><p className="text-sm font-semibold text-slate-400">{createdAt} </p></div>
 
               </div>
