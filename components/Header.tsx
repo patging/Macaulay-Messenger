@@ -7,7 +7,7 @@ import NavButton from "./NavButton"
 const Header = () => {
     // in regards to the hamburger menu
     const [isOpen, setIsOpen] = useState(false);
-    const windowHeight = useRef(window.innerWidth ); // width of the window we're in 
+    //const windowHeight = useRef(window.innerWidth ); // width of the window we're in 
 
     // dummy data
     let links = [
