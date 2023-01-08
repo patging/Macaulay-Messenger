@@ -30,9 +30,9 @@ export const ArticleThumbnail = ({Title, description, section, content, authorID
                 <div><p className="text-sm font-semibold text-slate-400">By <a href="https://www.youtube.com">{ `Author ${id}` }</a> </p></div>
                 <div><p className="text-sm font-semibold text-slate-400">{"09/09/09"} </p></div>
        
-                <p className="text-sm font-semibold text-slate-800"><a href = "#">{ "FirstName LastName" }</a></p>
+              
                 <p className="text-base text-slate-800">{ description }</p>
-                <div><p className="text-sm font-semibold text-slate-400">By <a href="https://www.youtube.com">{ `Author ${authorID}` }</a> </p></div>
+
                 <div><p className="text-sm font-semibold text-slate-400">{createdAt} </p></div>
 
               </div>
