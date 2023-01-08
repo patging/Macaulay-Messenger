@@ -10,14 +10,17 @@ datasource db {
 model Articles {
   id       Int      @id @default(autoincrement())
   Title    String
+  description String
+  section String
+  createdAt String
   content  String
   authorID Int
   Userpass Userpass @relation(fields: [authorID], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model Userpass {
-  id       Int        @id @default(autoincrement())
-  name     String
+  id       Int        @id @default(autoincrement()) @unique
+  name     String     @unique
   password String
   Articles Articles[]
 }

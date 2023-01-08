@@ -1,0 +1,4 @@
+#these are the requirements for createTestDb.py
+
+faker
+sqlite3
