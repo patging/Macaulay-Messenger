@@ -5,17 +5,16 @@ import "../styles/links.css"
 
 export interface articleBody {
   Title: string,
-  linkto? : string,
-  section? : string,
-  content : string,
-  author : string,
-  date? : string,
-  img? : string,
-  id? : number,
+  section: string,
+  description : string,
+  content: string,
+  authorID: number,
+  createdAt: string,
+  id: number,
 }
 
 
-export const ArticleThumbnail = ({Title , section, linkto  , content , author , id  } : articleBody) => {
+export const ArticleThumbnail = ({Title, description, section, content, authorID, createdAt, id } : articleBody) => {
     return(  
       
         <div className="group relative md:container mx-auto w-96 overflow-hidden rounded-[16px] p-[1px]">
@@ -26,10 +25,10 @@ export const ArticleThumbnail = ({Title , section, linkto  , content , author , 
                 
                 <a href={"#"} className="text-2xl font-bold text-slate-800">{ content.length < 100 ? content : content.substring(0,97) + "..." }</a>
 
-                <p className="text-sm font-semibold text-slate-800"><a href = "#">{ "Test" }</a></p>
-                <p className="text-base text-slate-800">{"Hello"}</p>
-                <div><p className="text-sm font-semibold text-slate-400">By <a href="https://www.youtube.com">{ `Author ${id}` }</a> </p></div>
-                <div><p className="text-sm font-semibold text-slate-400">{"09/09/09"} </p></div>
+                <p className="text-sm font-semibold text-slate-800"><a href = "#">{ "FirstName LastName" }</a></p>
+                <p className="text-base text-slate-800">{ description }</p>
+                <div><p className="text-sm font-semibold text-slate-400">By <a href="https://www.youtube.com">{ `Author ${authorID}` }</a> </p></div>
+                <div><p className="text-sm font-semibold text-slate-400">{createdAt} </p></div>
 
               </div>
         </div>
