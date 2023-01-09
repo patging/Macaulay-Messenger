@@ -9,7 +9,7 @@ export interface mastHeadBody {
 
 export const MastHead = ({articles} : mastHeadBody) => {
     return(
-    <section id="homePageContent" className="place-content-center gap-4 divide-x-2 divide-gray-200">
+    <section id="homePageContent" className="place-content-center gap-4 divide-x-2 divide-gray-200 pr-6">
         <div className="gap-25 divide-y divide-gray-200">
             <div><ArticleThumbnail {...articles[0]}/></div> 
 

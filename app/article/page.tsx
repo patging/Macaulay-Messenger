@@ -31,6 +31,7 @@ export default async function page() {
             </div>
             
             <RelatedRibbon/>
+            
             <Footer/>
         </div>
         
