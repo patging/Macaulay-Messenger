@@ -2,8 +2,13 @@ import "../styles/global.css"
 import "../styles/links.css"
 
 import NoImgThumbnail from "./noImageThumbnail"
+import {articleBody} from "./ArticleThumbnail"
 
-const RelatedRibbon = () => {
+interface RibbonBody {
+    articles : articleBody[],
+}
+
+const RelatedRibbon = ( {articles} : RibbonBody ) => {
     return(
         <div className="">
             <div><h1 className="md:text-2xl text-1xl text-semibold">Related Articles</h1></div>

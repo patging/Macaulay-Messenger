@@ -10,14 +10,22 @@ import SideTab from '../../components/sideTab_MastHead'
 
 export default async function page() {
     
-    const resp  = await fetch(`http://localhost:3000/api/article/getNewArticles?numArticles=${9}`,
+    const resp  = await fetch(`http://localhost:3000/api/article/getNewArticles?numArticles=${6}`,
       {
         method: "POST",
       }
     ); 
     const resp_json  = await resp.json();
     const articles =  resp_json['articles'];
-    
+
+    const resp_  = await fetch(`http://localhost:3000/api/article/getNewArticles?numArticles=${6}`,
+      {
+        method: "POST",
+      }
+    ); 
+    const resp_json  = await resp.json();
+    const articles =  resp_json['articles'];
+
     return(
         <div>
             <Header/>
@@ -25,11 +33,11 @@ export default async function page() {
                 <div className="mx-auto">
                     <ArticlePage/>
 
-                    <RelatedRibbon/>
+                    <RelatedRibbon articles={articles.slice(4,6)}/>
 
                 </div>
                 <div>
-                    <SideTab articles={articles.slice(5,9)}/>
+                    <SideTab articles={articles.slice(0,4)}/>
                 </div>  
 
             </div>
