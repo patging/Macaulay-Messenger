@@ -21,7 +21,6 @@ export default async function page() {
     const resp_json  = await resp.json();
     const articles =  resp_json['articles'];
 
-
     return ( 
         <>
          <script src="https://cdn.tailwindcss.com"></script>

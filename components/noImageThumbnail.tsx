@@ -1,20 +1,27 @@
 import "../styles/global.css"
 import "../styles/links.css"
 
-const NoImgThumbnail = () => {
+import {articleBody} from "./ArticleThumbnail"
+
+import Link from 'next/link'
+
+const NoImgThumbnail = ({Title, description, section,  authorID, createdAt, id } : articleBody) => {
     return(
         <div className="group relative md:container mx-auto w-96 overflow-hidden rounded-[16px] p-[1px]">
-            <div className="relative bg-white">
-                <div className="space-y-2">
-                    <a href="" className="text-2xl font-bold text-slate-800">jkjkj jkjkj jkjkj jkjkj jkjkj jkjkj jkjkj jkjkj jkjkj jkjkj </a>
-                    <p className="text-sm font-semibold text-slate-800">Tag</p>
-                    <p className="text-base text-slate-800">jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj jkjkjkjkj </p>
-                    <p className="text-sm font-semibold text-slate-400">By <a href="">Author</a> </p>
-                    <p className="text-sm font-semibold text-slate-400">09/09/09 | 5:00 AM</p>
-                </div>
+          
+          <div className="relative bg-white p-6">
+              <div className="space-y-2">
+                
+                <Link href={`/article/${id}`} className="text-2xl font-bold text-slate-800">{ Title.length < 100 ? Title : Title.substring(0,97) + "..." }</Link>
 
-            </div>
+                <p className="text-sm font-semibold text-slate-800"><Link href ={`/section/${section}`}>{ section }</Link></p>
+                <p className="text-base text-slate-800">{description}</p>
+                <div><p className="text-sm font-semibold text-slate-400">By <Link href={`/profile/${authorID}`}>{ `Author ${authorID}` }</Link> </p></div>
+                       
+                <div><p className="text-sm font-semibold text-slate-400">{createdAt} </p></div>
 
+              </div>
+        </div>
         </div>
     )
 }

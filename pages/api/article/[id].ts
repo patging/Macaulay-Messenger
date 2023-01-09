@@ -8,7 +8,6 @@ import { PrismaClient } from '@prisma/client'
 
     schema in prisma/schema.prisma
     
-\
 */
 export default async function handler(
   req: NextApiRequest,
@@ -24,7 +23,7 @@ export default async function handler(
 		});
 		if (! article) {
 			// article is null b/c nothing meets the query
-			res.status(200).json({success : true, article : {}});
+			res.status(200).json({success : true, message : `ArticleID ${req.query['id']} does not exist.`});
 		} else {
 			res.status(200).json({success : true, article : article}); 
 		}	

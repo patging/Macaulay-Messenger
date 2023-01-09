@@ -13,8 +13,8 @@ const RelatedRibbon = ( {articles} : RibbonBody ) => {
         <div className="">
             <div><h1 className="md:text-2xl text-1xl text-semibold">Related Articles</h1></div>
             <div className="flex divide-x-2 divide-gray-200">
-                <div className="flex-auto"><NoImgThumbnail/></div>
-                <div className="flex-auto"><NoImgThumbnail/></div>
+                <div className="flex-auto"><NoImgThumbnail {...articles[0]}/></div>
+                <div className="flex-auto"><NoImgThumbnail {...articles[1]}/></div>
                 
             </div>
         </div>

@@ -25,16 +25,16 @@ export default async function handler(
    if (req.method == "GET") {
 		const prisma = new PrismaClient();
 
-		const article = await prisma.userpass.findUnique({
+		const profile = await prisma.userpass.findUnique({
 			where: {
 				id : parseInt(req.query['id'] as string)
 			},
 		});
-		if (! article) {
+		if (! profile) {
 			// article is null b/c nothing meets the query
 			res.status(200).json({success : true, results : {}});
 		} else {
-			res.status(200).json({success : true, results : article}); 
+			res.status(200).json({success : true, results : profile}); 
 		}	
 	} else {
      res.status(400).json({success : false, message : "Error: bad request"});
