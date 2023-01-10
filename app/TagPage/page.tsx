@@ -12,7 +12,7 @@ export default async function page() {
     return(
         <div>
             <Header/>
-            <RelatedRibbon/>
+            {/*<RelatedRibbon/> */}
             <a className="btn-slice" href="">
                 <div className="top"> 
                     <span>Load More</span>
