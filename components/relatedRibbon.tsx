@@ -15,11 +15,9 @@ const RelatedRibbon = ( {articles} : RibbonBody ) => {
             <div className="flex divide-x-2 divide-gray-200">
                 <div className="flex-auto"><NoImgThumbnail {...articles[0]}/></div>
                 <div className="flex-auto"><NoImgThumbnail {...articles[1]}/></div>
-                
             </div>
         </div>
-            
-    )
+    );
 }
 
 
