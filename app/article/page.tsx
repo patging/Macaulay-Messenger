@@ -23,14 +23,14 @@ export default async function page() {
             <Header/>
             <div className="flex">
                 <div className="mx-auto">
-                    <ArticlePage/>
+                    {/*<ArticlePage/>*/}
                 </div>
                 <div>
                     <SideTab articles={articles.slice(5,9)}/>
                 </div>  
             </div>
             
-            <RelatedRibbon/>
+            {/*<RelatedRibbon/>*/}
             
             <Footer/>
         </div>
