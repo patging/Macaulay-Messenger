@@ -3,6 +3,7 @@
 import "../styles/global.css"
 import {useState, useRef} from 'react';
 import NavButton from "./NavButton"
+import Link from 'next/link'
 
 const Header = () => {
     // in regards to the hamburger menu
@@ -15,7 +16,7 @@ const Header = () => {
         {link: "", text: "City College"},
         {link: "", text: "NYU"},
         {link: "", text: "Brookdale"},
-        {link: "", text: "Opinons"},
+        {link: "/TagPage", text: "Opinons"},
     ];
 
     /* The Hamburger Dropdown is kind of hacky 
@@ -38,7 +39,7 @@ const Header = () => {
                 </div>
                     {/*This is the header title */}
                 <div className="text-center w-[100%]">
-                    <h1 className='font-playfair font-bold text-3xl md:text-6xl'>Macaulay Messenger</h1>
+                    <Link href="/"><h1 className='font-playfair font-bold text-3xl md:text-6xl'>Macaulay Messenger</h1></Link>
                 </div>
         
             </div>
