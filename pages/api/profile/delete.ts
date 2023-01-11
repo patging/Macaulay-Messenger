@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../../../prisma/db' 
 /*
     /api/article/add?uid= ,
 
@@ -12,7 +12,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
    if (req.method == "DELETE") {
-        const prisma = new PrismaClient();
         // data validation
 		if(! req.query["uid"]) {
             res.status(400).json({success: false, message: `Error: Bad request body`});

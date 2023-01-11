@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../../../prisma/db' 
 /*
     /api/article/[id]
 
@@ -14,7 +14,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
    if (req.method == "GET") {
-		const prisma = new PrismaClient();
 
 		const article = await prisma.articles.findUnique({
 			where: {

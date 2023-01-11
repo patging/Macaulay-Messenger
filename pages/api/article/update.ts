@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../../../prisma/db' 
 /*
     /api/article/add?articleID= ,
 
@@ -12,7 +12,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
    if (req.method == "PUT") {
-        const prisma = new PrismaClient();
         // data validation
         if(! req.query["title"] || ! req.query["content"] || ! req.query["authorID"]) {
             res.status(400).json({message: `Error: Bad request body`});

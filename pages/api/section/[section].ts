@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../../../prisma/db' 
 
 /*
     /api/section/[section]
@@ -13,6 +13,7 @@ import { PrismaClient } from '@prisma/client'
     if num isn't given will return 422 error
 
 */
+
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
@@ -30,8 +31,6 @@ export default async function handler(
         } else {
 
           let num : number = parseInt(req.query['num'] as string);
-
-          const prisma = new PrismaClient();
 
           const articles = await prisma.articles.findMany({
             where : {

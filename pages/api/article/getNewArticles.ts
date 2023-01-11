@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../../../prisma/db' 
 /*
     POST : /api/article/getNewArticles 
 
@@ -22,7 +22,6 @@ export default async function handler(
             res.status(422).json({success : false, message : "Error : bad request body"});
             return;
         }
-		const prisma = new PrismaClient();
 		const articles = await prisma.articles.findMany({
 			orderBy : {
                 id : 'desc',
