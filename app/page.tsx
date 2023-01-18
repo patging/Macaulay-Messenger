@@ -6,7 +6,7 @@ import Header from "../components/Header"
 import Footer from '../components/footer'
 import { mastHeadBody, MastHead} from '../components/masthead'
 import SideTab from '../components/sideTab_MastHead'
-
+import { ArticleText } from '../components/articleText'
 /* 
     /
 
