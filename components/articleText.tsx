@@ -36,13 +36,13 @@ const SETTINGS = {
 }
 /* 
     Config object for the markdown to jsx folder
-
+    to be updated
 */
 
 export const ArticleText = ({body} : atBody ) => {
     return (
         <>
-            <Markdown options={SETTINGS} >{'# First Markdown Blog We can type text. \n\n ## Sneed'}</Markdown>
+            <Markdown options={SETTINGS} >{body}</Markdown>
         </>
     );
 }
