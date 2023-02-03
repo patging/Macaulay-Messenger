@@ -12,7 +12,7 @@ import React from 'react';
 interface atBody {
     body : string
 } // how do you just definoe obj easier :crying:
-
+/*
 interface wrapperBody {
     children : any,
     props : any,
@@ -21,24 +21,32 @@ interface wrapperBody {
 const GenWrapper = ({children, ...props} : wrapperBody) => {
     return <div {...props}>{children}</div>
 };
-
+*/
 const SETTINGS = {
     overrides : {
         h1 : {
-            component : GenWrapper,
             props : {
-                className : 'text-xl'
+                className : 'text-3xl'
             }
         },
+        h2 : {
+            props : {
+                className : "text-xl"
+             }
+        },
+        p : {
+            props : {
+                className : "text-md"
+            }
+        }
 
 
     }
-}
+} 
 /* 
     Config object for the markdown to jsx folder
     to be updated
 */
-
 export const ArticleText = ({body} : atBody ) => {
     return (
         <>
