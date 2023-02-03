@@ -49,8 +49,8 @@ const SETTINGS = {
 */
 export const ArticleText = ({body} : atBody ) => {
     return (
-        <>
+        <div className="mb-5">
             <Markdown options={SETTINGS} >{body}</Markdown>
-        </>
+        </div>
     );
 }

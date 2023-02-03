@@ -32,7 +32,7 @@ export const ArticlePage = ({Title, section, description, content, authorID, cre
 
             </div>
             <img className="pb-4" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/youtube-thumbnail-design-template-bd73c9b9180d60c8d677aae7e7495d7f_screen.jpg?ts=1593284625" alt="" />
-            <ArticleText body={content}></ArticleText>
+            <ArticleText body={content }></ArticleText>
                 
             
         </div>
