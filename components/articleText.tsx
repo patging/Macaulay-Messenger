@@ -26,17 +26,17 @@ const SETTINGS = {
     overrides : {
         h1 : {
             props : {
-                className : 'text-3xl'
+                className : 'text-3xl mxy-2'
             }
         },
         h2 : {
             props : {
-                className : "text-xl"
+                className : "text-xl my-2"
              }
         },
         p : {
             props : {
-                className : "text-md"
+                className : "text-md my-2"
             }
         }
 

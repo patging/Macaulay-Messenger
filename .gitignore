@@ -36,5 +36,5 @@ env.js
 next-env.d.ts
 
 #database
-*sqlite
+*.sqlite
 *.db
