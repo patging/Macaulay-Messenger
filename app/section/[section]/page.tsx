@@ -2,10 +2,26 @@ import React from 'react'
 
 import "../../styles/global.css"
 
-import Header from "../../components/Header"
-import SlicingButton from '../../components/SlicingButton'
+import Header from "../../../components/Header"
+import SlicingButton from '../../../components/SlicingButton'
 
-export default async function page() {
+export default async function Page({params} : any) {
+
+    const related_resp  = await fetch(`http://localhost:3000/api/section/`,
+      {
+        method: "POST",
+        body: JSON.stringify({a: 1, b: 2})
+        
+      }
+    ); 
+    const related_resp_json  = await related_resp.json();
+    const related =  related_resp_json['articles'];
+
+    
+    // makes me wish I knew how to code AHHHHHHHH
+
+   
+
     return(
         <div>
             <Header/>
