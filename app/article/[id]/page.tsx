@@ -42,7 +42,6 @@ export default async function page({params} : any) {
 
     return(
         <div>
-            <Header/>
             <div className="flex">
                 <div className="mx-auto">
                     <ArticlePage {...article} />
