@@ -1,21 +1,17 @@
 import React from 'react'
 
-import "../../styles/global.css"
+import "../../../styles/global.css"
 
 import Header from "../../../components/Header"
 import SlicingButton from '../../../components/SlicingButton'
 
-export default async function Page({params} : any) {
+export default async function Page({
+    params,
+} : {
+    params : { slug : string};
+ } ) {
 
-    const related_resp  = await fetch(`http://localhost:3000/api/section/`,
-      {
-        method: "POST",
-        body: JSON.stringify({a: 1, b: 2})
-        
-      }
-    ); 
-    const related_resp_json  = await related_resp.json();
-    const related =  related_resp_json['articles'];
+   
 
     
     // makes me wish I knew how to code AHHHHHHHH
@@ -24,7 +20,7 @@ export default async function Page({params} : any) {
 
     return(
         <div>
-            <Header/>
+            
             <h1 className="md:text-4xl text-2xl font-semibold pt-12 pb-4">Opinion</h1>
             <div className="divide-y-2 divide-black"> {/* for the black line underneath opinion*/}
                 <div></div>

@@ -4,6 +4,7 @@ import "../styles/global.css"
 import {useState, useRef} from 'react';
 import NavButton from "./NavButton"
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Header = () => {
     // in regards to the hamburger menu
@@ -16,7 +17,7 @@ const Header = () => {
         {link: "", text: "City College"},
         {link: "", text: "NYU"},
         {link: "", text: "Brookdale"},
-        {link: "/TagPage", text: "Opinons"},
+        {link: "/section", text: "Opinons"},
     ];
 
     /* The Hamburger Dropdown is kind of hacky 
