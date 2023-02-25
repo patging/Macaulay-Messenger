@@ -85,9 +85,9 @@ const Header = () => {
                         </div>
 
                         {/* Nav itself */}
-                        <nav className={`  border-primaryMacaulay bg-primaryMacaulay `}>
+                        <nav className={`  border-primaryMacaulay bg-primaryMacaulay px-[10%] lg:px-0 `}>
                                     {/* When this is in the large screen, it'll be traditional header with logo on top */}
-                                        <ul className={`hidden lg:flex px-2 justify-around text-center `}>
+                                        <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around `}>
                                             {links.map( (l) => (
                                                     <NavButton text={l.text} url={l.link} />
                                                 ) 
@@ -121,7 +121,7 @@ const Header = () => {
                                                 <div className="flex-none">
                                                         <Link href="/">
                                                             <div>
-                                                                <Image src="/images/Small_Black_Logo.png" alt="Macaulay Messenger" width="370" height="120" />
+                                                                <Image src="/images/Small_White_Logo.png" alt="Macaulay Messenger" width="370" height="120" />
                                                             </div>
                                                         </Link>
                                                 </div>
