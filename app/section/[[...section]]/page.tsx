@@ -7,9 +7,7 @@ import SlicingButton from '../../../components/SlicingButton'
 
 export default async function Page({
     params,
-} : {
-    params : { slug : string};
- } ) {
+    } : any) {
 
    
 
@@ -21,7 +19,7 @@ export default async function Page({
     return(
         <div>
             
-            <h1 className="md:text-4xl text-2xl font-semibold pt-12 pb-4">Opinion</h1>
+            <h1 className="md:text-4xl text-2xl font-semibold pt-12 pb-4">Category : {params['section']}</h1>
             <div className="divide-y-2 divide-black"> {/* for the black line underneath opinion*/}
                 <div></div>
                 <div></div>

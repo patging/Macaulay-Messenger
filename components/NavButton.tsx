@@ -10,8 +10,19 @@ const NavButton = ({ text, url } : body) => {
     /*
         NavButton used primarily in the Header Component
     */
+
     return (
-        <span className=' hover:underline' > <Link href={url}> {text} </Link> </span>
+        <li key={text} className="group w-[100%] py-2 bg-primaryMacaulay hover:bg-white"> 
+            <span className='' > 
+                <Link href={url}> 
+                    {<h6 className='text-white group-hover:text-primaryMacaulay'>{text}</h6>} 
+                </Link> 
+            </span>
+        </li>
     );
 };
+
+
+
+
 export default NavButton;

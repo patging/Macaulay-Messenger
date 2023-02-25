@@ -3,11 +3,8 @@ import "../styles/links.css"
 
 
 const Footer = () => {
-    return(
-    <div className="border-y-4">
-        
-    </div>
-    )
+
+   return(<h1> HEY</h1>);
     
 }
 

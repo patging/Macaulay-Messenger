@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors : {
+        "primaryMacaulay": "#D65945",
+      },
       animation: {
         'spin-slow': 'spin 5s linear infinite',
       },
