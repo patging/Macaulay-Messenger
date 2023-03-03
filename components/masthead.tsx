@@ -9,19 +9,16 @@ export interface mastHeadBody {
 
 export const MastHead = ({articles} : mastHeadBody) => {
     return(
-    <section id="homePageContent" className="place-content-center gap-4 divide-x-2 divide-gray-200 pr-6">
-        <div className="gap-25 divide-y divide-gray-200">
+    <section id="homePageContent" className="place-content-center divide-x-2 divide-gray-200 ">
+        <div className="divide-y-2 divide-gray-200">
             <div><ArticleThumbnail {...articles[0]}/></div> 
 
-            <div className="flex flex-col md:flex-row divide-x-2 divide-gray-200">  
-                <div className ="basis 1/2"><ArticleThumbnail {...articles[1]}/></div>
-                <div className="basis 1/2"><ArticleThumbnail {...articles[2]}/></div>
+            <div className="grid grid-cols-2 divide-x-2 divide-gray-200 pt-2">  
+                <div className ="divide-y-2 divide-gray-200 pr-2"><div><ArticleThumbnail {...articles[1]}/></div><div></div></div>
+                <div className ="divide-y-2 divide-gray-200 pl-2"><div><ArticleThumbnail {...articles[2]}/></div><div></div></div>
             </div>
 
-            <div className="flex flex-col md:flex-row divide-x-2 divide-gray-200">
-                <div className ="basis 1/2"><ArticleThumbnail {...articles[3]}/></div>
-                <div className="basis 1/2"><ArticleThumbnail {...articles[4]}/></div>
-            </div>
+           
 
         </div>
     </section>

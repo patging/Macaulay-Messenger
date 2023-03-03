@@ -4,16 +4,17 @@ import { ArticleThumbnail} from '../components/ArticleThumbnail'
 import { mastHeadBody } from "./masthead"
 import NoImgThumbnail from "./noImageThumbnail"
 
-const SideTab = ({articles} : mastHeadBody) =>{
+const Opinionsidetab = ({articles} : mastHeadBody) =>{
     return(
         <section className="columns-1 divide-y-2 divide-gray-200 ">
-            <p className="text-2xl font-semibold">Recommended</p>
-            <div className="py-2"><NoImgThumbnail {...articles[0]}/></div>
+            <p className="text-2xl font-semibold text-center">Recommended</p>
+            <div className="py-2"><ArticleThumbnail {...articles[0]}/></div>
             <div className="py-2"><NoImgThumbnail {...articles[1]}/></div>
+            <div className="py-2"><NoImgThumbnail {...articles[2]}/></div>
             <div></div>
             
         </section>
     )
 }
 
-export default SideTab;
+export default Opinionsidetab;
