@@ -5,7 +5,7 @@ import "../../../styles/global.css"
 import RelatedRibbon from "../../../components/relatedRibbon"
 import ArticlePage from "../../../components/articlePage"
 import Header from "../../../components/Header"
-import Footer from '../../../components/footer'
+import Footer from '../../../components/Footer'
 import SideTab from '../../../components/sideTab_MastHead'
 
 
@@ -55,7 +55,6 @@ export default async function page({params} : any) {
 
             </div>
             
-            <Footer/>
         </div>
         
         

@@ -1,7 +1,7 @@
 'use client';
 
 import "../styles/global.css"
-import {useState} from 'react';
+import { useState } from 'react';
 import NavButton from "./NavButton"
 import Link from 'next/link'
 import Image from 'next/image'
@@ -13,165 +13,141 @@ const Header = () => {
 
     // dummy data
     let links = [
-        {link: "/section/Hunter", text: "Hunter College"},
-        {link: "/section/City_College", text: "City College"},
-        {link: "/section/NYU", text: "NYU"},
-        {link: "/section/Brookdale", text: "Brookdale"},
-        {link: "/section/Opinions", text: "Opinons"},
+        { link: "/section/Hunter", text: "Hunter College" },
+        { link: "/section/City_College", text: "City College" },
+        { link: "/section/NYU", text: "NYU" },
+        { link: "/section/Brookdale", text: "Brookdale" },
+        { link: "/section/Opinions", text: "Opinons" },
     ];
 
     /* The Hamburger Dropdown is kind of hacky 
     perhaps a rewrite should be done in the future */
-    return ( 
+    return (
         <>
-                        {/*This is the header when the screen is xl */}
+            {/*This is the header when the screen is xl */}
 
-                        {/* Left side Links */}
-                        <div className=" hidden lg:flex visible justify-between ">
-                            <div className="hidden w-[25%]  lg:flex visible  justify-start ">
-                                <a href="" className="px-2 text-primaryMacaulay">About</a>
-                                <a href="" className="px-2 text-primaryMacaulay">Our team</a>
-                                <a href="" className="px-2 text-primaryMacaulay">Advertise</a>
-                                <a href="" className="px-2 text-primaryMacaulay">Donate</a>
+            {/* Left side Links */}
+            <div className=" hidden lg:flex visible justify-between ">
+                <div className="hidden w-[25%]  lg:flex visible  justify-start ">
+                    <a href="" className="px-2 text-primaryMacaulay">About</a>
+                    <a href="" className="px-2 text-primaryMacaulay">Our team</a>
+                    <a href="" className="px-2 text-primaryMacaulay">Advertise</a>
+                    <a href="" className="px-2 text-primaryMacaulay">Donate</a>
 
-                            </div>
+                </div>
 
 
-                            {/* Image for Macaulay Messenger*/}
-                            <div className="flex-none">
-                                    <Link href="/">
-                                        <div>
-                                            <Image src="/images/Small_Red_Logo.png" alt="Macaulay Messenger" width="650" height="120" />
-                                        </div>
-                                    </Link>
-                            </div>
+                {/* Image for Macaulay Messenger*/}
+                <div className="flex-none">
+                    <Link href="/">
+                        <div>
+                            <Image src="/images/Small_Red_Logo.png" alt="Macaulay Messenger" width="650" height="120" />
+                        </div>
+                    </Link>
+                </div>
 
-                            {/* Right side Links */}
-                            <div className="hidden w-[25%]  lg:flex visible  justify-end ">
-                            <div className="inline mx-2 pt-1">
+                {/* Right side Links */}
+                <div className="hidden w-[25%]  lg:flex visible  justify-end ">
+                        <div className="inline mx-2 pt-1">
+                            <Link href="">
                                 <Image
-                                        priority
-                                        src="/images/gmail_white.svg"
-                                        height={24}
-                                        width={24}
-                                        alt="GM"
-                                    />
-                                </div>
-
-                                <div className="inline mx-2 pt-1">
-                                    <Image
-                                        priority
-                                        src="/images/instagram_white.svg"
-                                        height={24}
-                                        width={24}
-                                        alt="GM"
-                                    />
-                                </div>
-
-                                <div className="inline mx-2 pt-1">
-                                    <Image
-                                        priority
-                                        src="/images/tiktok_white.svg"
-                                        height={24}
-                                        width={24}
-                                        alt="GM"
-                                    />
-                                </div>
-                            </div>
-
-                         
-
-
+                                    priority
+                                    src="/images/gmail_white.svg"
+                                    height={24}
+                                    width={24}
+                                    alt="GM"
+                                />
+                            </Link>
                         </div>
 
-                        {/* Nav itself */}
-                        <nav className={`  border-primaryMacaulay bg-primaryMacaulay px-[10%] lg:px-0 `}>
-                                    {/* When this is in the large screen, it'll be traditional header with logo on top */}
-                                        <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around `}>
-                                            {links.map( (l) => (
-                                                    <NavButton text={l.text} url={l.link} />
-                                                ) 
-                                            )}
-                                        </ul>
+                        <div className="inline mx-2 pt-1">
+                            <Link href="">
+                                <Image
+                                    priority
+                                    src="/images/instagram_white.svg"
+                                    height={24}
+                                    width={24}
+                                    alt="GM"
+                                />
+                            </Link>
+                        </div>
 
-                                    {/* When it's in a more mobile mode it'll have that other version with a drop down and whatnot */}
-
-                                        <div className="flex justify-evenly visible lg:hidden">
-                                            {/* The hamburger icon */}
-                                            <div className={`inline lg:hidden`} onClick={() => {setIsOpen(!isOpen);} }>
-                                                {isOpen? 
-                                                    <div className="flex justify-end">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-7 h-7">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                                        </svg> 
-                                                    </div>
-
-                                                    
-                                                    :
-                                                    <div className="flex justify-end py-3">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-7 h-7">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                                        </svg> 
-                                                    </div>
-                 
-                                                }
-                                            </div>
-
-                                            {/* Image for Macaulay Messenger*/}
-                                                <div className="flex-none">
-                                                        <Link href="/">
-                                                            <div>
-                                                                <Image src="/images/Small_White_Logo.png" alt="Macaulay Messenger" width="370" height="120" />
-                                                            </div>
-                                                        </Link>
-                                                </div>
+                        <div className="inline mx-2 pt-1">
+                            <Link href="">
+                                <Image
+                                    priority
+                                    src="/images/tiktok_white.svg"
+                                    height={24}
+                                    width={24}
+                                    alt="GM"
+                                />
+                            </Link>
+                        </div>
+                </div>
 
 
-                                            {/* Icons and whatnots */}
-                                                <div className="flex justify-end">
-                                                    <div className="inline-flex mx-2">
-                                                        <Image
-                                                            priority
-                                                            src="/images/gmail_white.svg"
-                                                            height={24}
-                                                            width={24}
-                                                            alt="GM"
-                                                        />
-                                                    </div>
 
-                                                    <div className="inline-flex mx-2">
-                                                        <Image
-                                                            priority
-                                                            src="/images/instagram_white.svg"
-                                                            height={24}
-                                                            width={24}
-                                                            alt="GM"
-                                                        />
-                                                    </div>
 
-                                                    <div className="inline-flex mx-2">
-                                                        <Image
-                                                            priority
-                                                            src="/images/tiktok_white.svg"
-                                                            height={24}
-                                                            width={24}
-                                                            alt="GM"
-                                                        />
-                                                    </div>
-                                                </div>
-                                        </div>  
+            </div>
 
-                                        {/* The other nav, idk why i just put 2 down */}
-                                            <ul className={`${isOpen? "visible" : "hidden "}  px-2  text-center lg:hidden `}>
-                                                {links.map( (l) => (
-                                                    <NavButton text={l.text} url={l.link} />
-                                                    ) 
-                                                )}
-                                            </ul>                                        
-                        </nav>
-                    
+            {/* Nav itself */}
+            <nav className={`  border-primaryMacaulay bg-primaryMacaulay px-[10%] lg:px-0 `}>
+                {/* When this is in the large screen, it'll be traditional header with logo on top */}
+                <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around `}>
+                    {links.map((l) => (
+                        <NavButton text={l.text} url={l.link} />
+                    )
+                    )}
+                </ul>
 
-                  {/* <> 
+                {/* When it's in a more mobile mode it'll have that other version with a drop down and whatnot */}
+
+                <div className="flex justify-evenly visible lg:hidden">
+                        {/* The hamburger icon */}
+                        <div className={`inline lg:hidden`} onClick={() => { setIsOpen(!isOpen); }}>
+                            {isOpen ?
+                                <div className="flex justify-end">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-7 h-7">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+
+
+                                :
+                                <div className="flex justify-end py-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-7 h-7">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                </div>
+
+                            }
+                        </div>
+
+                        {/* Image for Macaulay Messenger*/}
+                        <div className="flex-none">
+                            <Link href="/">
+                                <div>
+                                    <Image src="/images/Small_White_Logo.png" alt="Macaulay Messenger" width="370" height="120" />
+                                </div>
+                            </Link>
+                        </div>
+
+
+
+
+                </div>
+
+                {/* The other nav, idk why i just put 2 down */}
+                <ul className={`${isOpen ? "visible" : "hidden "}  px-2  text-center lg:hidden `}>
+                    {links.map((l) => (
+                        <NavButton text={l.text} url={l.link} />
+                    )
+                    )}
+                </ul>
+            </nav>
+
+
+            {/* <> 
 
                                 
                                 <div className='flex'>   
@@ -199,8 +175,8 @@ const Header = () => {
                                 </nav>
                     </> 
                 */}
-            </>
-            
+        </>
+
     );
 }
 
