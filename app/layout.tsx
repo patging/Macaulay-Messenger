@@ -10,7 +10,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
         
         <Header/>
 
-        <div className="flex-row lg:px-[10%]">
+        <div className="flex-row lg:px-[20%]">
           {children} 
         </div>
 
