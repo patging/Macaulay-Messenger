@@ -3,11 +3,18 @@ import React from 'react'
 import "../../../styles/global.css"
 
 import Header from "../../../components/Header"
-import SlicingButton from '../../../components/SlicingButton'
 
 export default async function Page({
     params,
     } : any) {
+
+        const resp  = await fetch(`http://localhost:3000/api/article/getNewArticles?numArticles=${9}`,
+      {
+        method: "POST",
+      }
+    ); 
+    const resp_json  = await resp.json();
+    const articles =  resp_json['articles'];
 
    
 
@@ -46,7 +53,7 @@ export default async function Page({
                 </div>
 
             </div>
-            <SlicingButton/>
+            
         </div>
         
     )
