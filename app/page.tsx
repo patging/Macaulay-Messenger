@@ -5,6 +5,8 @@ import "../styles/global.css"
 import { mastHeadBody, MastHead} from '../components/masthead'
 import SideTab from '../components/sideTab_MastHead'
 import Opinionsidetab from '../components/opinionsidetab'
+
+
 /* 
     /
 
@@ -21,9 +23,6 @@ export default async function page() {
 
     return ( 
         <>
-         
-          
-            
               
               <div className=" grid grid-cols-4  divide-x-2 divide-gray-200">
                 <div className="px-2"><SideTab  articles={articles.slice(5,9)}/></div>

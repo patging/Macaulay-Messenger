@@ -16,7 +16,7 @@ const Opinionsidetab = ({articles} : mastHeadBody) =>{
     ]
 
     return(
-        <section className="columns-1 pt-2">
+        <section className="columns-1 pt-2 border border-primaryMacaulay">
             <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around `}>
                     {links.map((l) => (
                         <li key={l.text} className="group w-[100%] py-2 bg-primaryMacaulay "> 
@@ -29,12 +29,16 @@ const Opinionsidetab = ({articles} : mastHeadBody) =>{
                     )
                     )}
             </ul>
-            <div className="divide-y-2 divide-gray-200 px-2 border-x-2 border-primaryMacaulay">
-            <div className="py-2 "><ArticleThumbnail {...articles[0]}/></div>
-            <div className="py-2"><NoImgThumbnail {...articles[1]}/></div>
-            <div className="py-2"><NoImgThumbnail {...articles[2]}/></div>
-            <div></div>
-            </div>
+             
+                <div className="divide-y-2 divide-gray-200 px-2 ">
+           
+                    <div className="py-2 "><ArticleThumbnail {...articles[0]}/></div>
+                    <div className="py-2"><NoImgThumbnail {...articles[1]}/></div>
+                    <div className="py-2"><NoImgThumbnail {...articles[2]}/></div>
+                    <div></div>
+            
+                </div>
+                <div></div>
         </section>
     )
 }

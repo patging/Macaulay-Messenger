@@ -6,6 +6,12 @@ import NavButton from "./NavButton"
 import Link from 'next/link'
 import Image from 'next/image'
 
+//date stuff didn't finish yet line 94
+let d = new Date()
+let months = ["January", "February", "March", "April",
+"May", "June", "July", "August", "September",
+"October", "November", "December"]
+
 const Header = () => {
     // in regards to the hamburger menu
     const [isOpen, setIsOpen] = useState(false);
@@ -85,7 +91,9 @@ const Header = () => {
                         </div>
                 </div>
 
-
+                {/* Date and latest issue couldn't format correctly*/}
+                {/*<div className="justify-center text-primaryMacaulay-400">{months[parseInt((d.getMonth()).toString())]} {(d.getDate()).toString()}, {(d.getFullYear()).toString()} | <Link href={""} className="group-hover:underline">Latest Issue</Link></div>
+                    */}
 
 
             </div>
@@ -99,6 +107,7 @@ const Header = () => {
                     )
                     )}
                 </ul>
+                
 
                 {/* When it's in a more mobile mode it'll have that other version with a drop down and whatnot */}
 
@@ -136,6 +145,8 @@ const Header = () => {
 
 
                 </div>
+
+                
 
                 {/* The other nav, idk why i just put 2 down */}
                 <ul className={`${isOpen ? "visible" : "hidden "}  px-2  text-center lg:hidden `}>
