@@ -5,8 +5,27 @@ import { mastHeadBody } from "./masthead"
 import NoImgThumbnail from "./noImageThumbnail"
 import NavButton from "./NavButton"
 import Link from 'next/link'
+import { articleBody } from "./Opinionpagearticle"
 
-const Opinionsidetab = ({articles} : mastHeadBody) =>{
+
+const Onlytitlethumbnail = ({Title, id } : articleBody) => {
+    return(
+        <div className="group relative md:container mx-auto w-96 overflow-hidden rounded-[16px] p-[1px]">
+          
+          <div className="relative bg-white p-6">
+              <div className="space-y-2">
+                
+                <Link href={`/article/${id}`} className="text-2xl font-bold text-slate-800">{ Title.length < 100 ? Title : Title.substring(0,97) + "..." }</Link>
+
+
+              </div>
+        </div>
+        </div>
+    )
+}
+
+
+const Mostread = ({articles} : mastHeadBody) =>{
 
     //dummy data gonna be similar to the navbar 
     //gonna use same sections so 
@@ -32,9 +51,9 @@ const Opinionsidetab = ({articles} : mastHeadBody) =>{
              
                 <div className="divide-y-2 divide-gray-200  ">
            
-                    <div className="py-2 "><ArticleThumbnail {...articles[0]}/></div>
-                    <div className="py-2"><NoImgThumbnail {...articles[1]}/></div>
-                    <div className="py-2"><NoImgThumbnail {...articles[2]}/></div>
+                    <div className="py-2 "><Onlytitlethumbnail {...articles[0]}/></div>
+                    <div className="py-2 "><Onlytitlethumbnail {...articles[1]}/></div>
+                    <div className="py-2 "><Onlytitlethumbnail {...articles[2]}/></div>
                     <div></div>
             
                 </div>
@@ -43,4 +62,4 @@ const Opinionsidetab = ({articles} : mastHeadBody) =>{
     )
 }
 
-export default Opinionsidetab;
+export default Mostread;

@@ -2,12 +2,12 @@ import '../styles/global.css'
 
 const SlicingButton = () => {
     return(
-       <button>
-            <span className="circle" aria-hidden="true">
+       //<button>
+        //    <span className="circle" aria-hidden="true">
                 <span className="arrow_icon"></span>
-            </span>
-            <span className="button_text">Load More</span>
-        </button>
+        //    </span>
+           // <span className="button_text">Load More</span>
+       // </button>
     )
 }
 
