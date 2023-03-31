@@ -8,7 +8,7 @@ interface body {
 
 const NavButton = ({ text, url } : body) => {
     /*
-        NavButton used primarily in the Header Component
+        NavButton used in the Header Component
     */
 
     return (

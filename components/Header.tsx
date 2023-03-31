@@ -99,13 +99,13 @@ const Header = () => {
             </div>
 
             {/* Nav itself */}
-            <nav className={`  border-primaryMacaulay bg-primaryMacaulay px-[10%] lg:px-0 `}>
+            <nav className={`  sticky top-0 z-10 border-primaryMacaulay bg-primaryMacaulay px-[10%] lg:px-0 `}>
                 {/* When this is in the large screen, it'll be traditional header with logo on top */}
-                <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around `}>
+                <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around`}>
                     {links.map((l) => (
                         <NavButton text={l.text} url={l.link} />
                     )
-                    )}
+                    )} 
                 </ul>
                 
 
