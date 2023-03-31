@@ -10,7 +10,7 @@ import Image from 'next/image'
 const Footer = () => {
 
    return (
-      <footer className="bg-white p-4 border-t-4 border-primaryMacaulay md:p-6">
+      <footer className="bg-white p-4 border-t-4 mt-5 border-primaryMacaulay md:p-6">
 
          {/* Holds the columns of items */}
          <div className="grid grid-cols-2 sm:grid-cols-5 px-[10%]">
