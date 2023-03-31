@@ -16,8 +16,8 @@ const Opinionsidetab = ({articles} : mastHeadBody) =>{
     ]
 
     return(
-        <section className="columns-1 pt-2 ">
-            <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around `}>
+        <section className="columns-1 ">
+            <ul className={`hidden lg:flex px-2 text-center justify-between lg:justify-around pt-0 `}>
                     {links.map((l) => (
                         <li key={l.text} className="group w-[100%] py-2 bg-primaryMacaulay "> 
                             <span className='' > 

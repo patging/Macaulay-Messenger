@@ -50,7 +50,8 @@ const Mostread = ({articles} : mastHeadBody) =>{
             </ul>
              
                 <div className="divide-y-2 divide-gray-200  ">
-           
+                        
+
                     <div className="py-2 "><Onlytitlethumbnail {...articles[0]}/></div>
                     <div className="py-2 "><Onlytitlethumbnail {...articles[1]}/></div>
                     <div className="py-2 "><Onlytitlethumbnail {...articles[2]}/></div>
