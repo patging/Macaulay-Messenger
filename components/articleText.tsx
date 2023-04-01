@@ -80,13 +80,6 @@ const SETTINGS = {
     }
 } 
 
-const s = `
-| Header  | Another header |
-|---------|----------------|
-| field 1 | something      |
-| field 2 | something else |
-`;
-
 /* 
     Config object for the markdown to jsx folder
     to be updated
