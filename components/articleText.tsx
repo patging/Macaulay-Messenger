@@ -22,6 +22,9 @@ const GenWrapper = ({children, ...props} : wrapperBody) => {
     return <div {...props}>{children}</div>
 };
 */
+
+// this obj exists because we need some custom aspects to the text and whatnot
+// and tailwind overwrtites the h1 -> h6
 const SETTINGS = {
     overrides : {
         h1 : {
@@ -31,16 +34,59 @@ const SETTINGS = {
         },
         h2 : {
             props : {
+                className : "text-2xl my-3"
+             }
+        },
+        h3 : {
+            props : {
                 className : "text-xl my-3"
+             }
+        },
+        h4 : {
+            props : {
+                className : "text-lg my-3"
+             }
+        },
+        h5 : {
+            props : {
+                className : "text-md my-3"
+             }
+        },
+        h6 : {
+            props : {
+                className : "text-base my-3"
              }
         },
         p : {
             props : {
-                className : "text-md my-3"
+                className : "text-base my-3"
+            }
+        },
+        blockquote : {
+            props : {
+                className : "text-base italic font-semibold my-3"
+            }
+        },
+        ol : {
+            props : {
+                className : "list-decimal list-inside"
+            }
+        },
+        ul : {
+            props : {
+                className : "list-decimal list-inside"
             }
         },
     }
 } 
+
+const s = `
+| Header  | Another header |
+|---------|----------------|
+| field 1 | something      |
+| field 2 | something else |
+`;
+
 /* 
     Config object for the markdown to jsx folder
     to be updated
