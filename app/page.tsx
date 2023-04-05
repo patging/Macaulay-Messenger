@@ -10,7 +10,7 @@ import Mostread from '../components/Mostread'
 
 import Opinionpagearticle from '../components/Opinionpagearticle';
 
-import MainpageSMArt from '../components/MainpageSMArt'
+import MainpageSmartArticle from '../components/MainpageSmallArticle'
 
 
 /* 
@@ -63,22 +63,22 @@ export default async function page() {
               </div>
               */} {/*old plan*/}
               
-              <h1 className="md:text-5xl text-2xl  pt-6 pb-4">Main Page</h1>
+              <h1 className="md:text-4xl text-2xl  pt-6 pb-4">Main Page</h1>
               <div className="divide-y-2 divide-gray-200"> {/* for the black line underneath opinion*/}
                 <div></div>
                 <div></div>
               </div>
 
-              <div className="grid grid-cols-4 py-4 divide-x-2">
-                <div className="col-span-3 pr-2 ">
+              <div className="grid grid-cols-7 py-4 divide-x-2">
+                <div className="col-span-5 pr-2 ">
                   <div className="divide-y-2"><ArticleThumbnail  {...articles[0]}/> <div></div></div>
-                  <MainpageSMArt {...articles[0]}/>
-                  <MainpageSMArt {...articles[0]}/>
+                  <MainpageSmartArticle className="align-left" {...articles[0]}/>
+                  <MainpageSmartArticle {...articles[0]}/>
                   </div>
 
-                <div className="grid grid-cols-1 ">
+                <div className="col-span-2 grid grid-cols-1">
                   <div className="px-2"><Opinionsidetab  articles={articles.slice(5,9)}/></div>
-                  <div className="pt-4 px-2"><Mostread  articles={articles.slice(5,9)}/></div>
+                  <div className="pt-4 px-1"><Mostread  articles={articles.slice(5,9)}/></div>
                 </div>
                 </div>
             
