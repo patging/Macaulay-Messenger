@@ -1,3 +1,7 @@
+/*
+    /section
+
+*/
 import React from 'react'
 
 import "../../../styles/global.css"
@@ -7,20 +11,20 @@ export default async function Page({
     params,
     } : any) {
 
-        const resp  = await fetch(`http://localhost:3000/api/article/getNewArticles?numArticles=${9}`,
-      {
-        method: "POST",
-      }
-    ); 
+    const resp  = await fetch(`http://localhost:3000/api/section/${params['section']}`,
+            {
+                method: "POST",
+                body: JSON.stringify(
+                    {
+                        num : 2,
+                    }
+                ),
+            }
+        ); 
     const resp_json  = await resp.json();
     const articles =  resp_json['articles'];
-
-   
-
     
     // makes me wish I knew how to code AHHHHHHHH
-
-   
 
     return(
         <div>
@@ -32,9 +36,7 @@ export default async function Page({
             </div>
             <div className="divide-y-2 divide-gray-200">
                 <h2 className="text-1xl font-semibold pt-2 pb-2">Articles</h2>
-                <Opinionpagearticle {...articles[0]}/>
-                <Opinionpagearticle {...articles[1]}/>
-
+                {articles.map( (article : any) =>  <Opinionpagearticle {...article}/> )}
             </div>
             
         </div>

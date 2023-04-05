@@ -80,9 +80,11 @@ const SETTINGS = {
     }
 } 
 
-/* 
-    Config object for the markdown to jsx folder
-    to be updated
+/*
+    ArticleText
+
+    Uses the MarkDown component from markdown-to-jsx 
+    to turn entire markdown into jsx
 */
 export const ArticleText = ({body} : atBody ) => {
     return (
