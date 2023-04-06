@@ -21,11 +21,10 @@ export default async function Page({
                 ),
             }
         ); 
+
     const resp_json  = await resp.json();
     const articles =  resp_json['articles'];
-    
     // makes me wish I knew how to code AHHHHHHHH
-
     return(
         <div>
             
@@ -36,7 +35,7 @@ export default async function Page({
             </div>
             <div className="divide-y-2 divide-gray-200">
                 <h2 className="text-1xl font-semibold pt-2 pb-2">Articles</h2>
-                {articles.map( (article : any) =>  <Opinionpagearticle {...article}/> )}
+                { articles.map( (article : any) =>  <Opinionpagearticle {...article}/> ) }
             </div>
             
         </div>
