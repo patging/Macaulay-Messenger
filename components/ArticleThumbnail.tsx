@@ -18,7 +18,7 @@ export interface articleBody {
 export const ArticleThumbnail = ({Title, description, section,  authorID, createdAt, id } : articleBody) => {
     return(  
       
-        <div className="group relative md:container mx-auto w-96 overflow-hidden  p-[1px]">
+        <div className="group relative md:container mx-auto w-96 overflow-hidden p-[1px]">
           
           <div className="relative bg-white ">
               <div className="space-y-2">
