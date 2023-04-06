@@ -1,8 +1,8 @@
 import "../styles/global.css"
 import "../styles/links.css"
-import { ArticleThumbnail} from '../components/ArticleThumbnail'
+import { ArticleThumbnail} from './thumbnails/ArticleThumbnail'
 import { mastHeadBody } from "./masthead"
-import NoImgThumbnail from "./noImageThumbnail"
+import NoImgThumbnail from "./thumbnails/noImageThumbnail"
 
 const SideTab = ({articles} : mastHeadBody) =>{
     return(

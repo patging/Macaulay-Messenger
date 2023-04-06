@@ -1,6 +1,6 @@
 
 import React from 'react'
-import NoImgThumbnail from '../../../components/noImageThumbnail';
+import NoImgThumbnail from '../../../components/thumbnails/noImageThumbnail';
 
 export default async function Page({ params,} : any) {
     

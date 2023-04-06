@@ -1,8 +1,15 @@
-import "../styles/global.css"
-import "../styles/links.css"
+
+/*
+
+This is used on the category page and on the right side of the main page and category page where there isn't an image
+
+*/
+
+import "../../styles/global.css"
+import "../../styles/links.css"
 
 import {articleBody} from "./ArticleThumbnail"
-import SectionButton from "./SectionButton"
+import SectionButton from "../SectionButton"
 
 import Link from 'next/link'
 
