@@ -14,13 +14,13 @@ model Articles {
   section String
   createdAt String
   content  String
+  author Userpass @relation(fields: [authorID], references: [id])
   authorID Int
-  Userpass Userpass @relation(fields: [authorID], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model Userpass {
   id       Int        @id @default(autoincrement()) @unique
   name     String     @unique
   password String
-  Articles Articles[]
+  articles Articles[]
 }

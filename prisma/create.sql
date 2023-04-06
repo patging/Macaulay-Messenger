@@ -12,7 +12,7 @@ CREATE TABLE Articles (
     "createdAt" TEXT NOT NULL,
     "content" TEXT NOT NULL,
     "authorID" INTEGER NOT NULL,
-    CONSTRAINT "Articles_authorID_fkey" FOREIGN KEY ("authorID") REFERENCES "Userpass" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+    FOREIGN KEY ("authorID") REFERENCES Userpass("id")
 );
 
 CREATE TABLE Userpass (

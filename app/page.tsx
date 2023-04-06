@@ -71,20 +71,16 @@ export default async function page() {
 
               <div className="grid grid-cols-7 py-4 divide-x-2">
                 <div className="col-span-5 pr-2 ">
-                  <div className="divide-y-2"><ArticleThumbnail  {...articles[0]}/> <div></div></div>
-<<<<<<< HEAD
-                  <MainpageSmartArticle className="align-left" {...articles[0]}/>
-                  <MainpageSmartArticle {...articles[0]}/>
-
-=======
-                  <MainpageSmallArticle Article className="align-left" {...articles[0]}/>
-                  <MainpageSmallArticle {...articles[0]}/>
->>>>>>> 04c6f029a650cf228042c835de4fe6967732d850
+                  <div className="divide-y-2">
+                    <ArticleThumbnail  {...articles[0]}/>
                   </div>
+                  <MainpageSmallArticle {...articles[1]}/>
+                  <MainpageSmallArticle {...articles[2]}/>
+                </div>
 
                 <div className="col-span-2 grid grid-cols-1">
-                  <div className="px-2"><Opinionsidetab  articles={articles.slice(5,9)}/></div>
-                  <div className="pt-4 px-1"><Mostread  articles={articles.slice(5,9)}/></div>
+                  <div className="px-2"><Opinionsidetab  articles={articles.slice(3,6)}/></div>
+                  <div className="pt-4 px-1"><Mostread  articles={articles.slice(6,9)}/></div>
                 </div>
                 </div>
             

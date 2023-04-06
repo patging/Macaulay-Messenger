@@ -2,7 +2,10 @@
 
 import React from 'react'
 import Link from 'next/link'
+
 import { ArticleText } from './articleText';
+import SectionButton from './SectionButton';
+
 import "../styles/global.css"
 
 
@@ -24,7 +27,8 @@ export const ArticlePage = ({Title, section, description, content, authorID, cre
             <p id="" className="pt-4 pb-2 text-2xl md:text-4xl text-semibold">{Title}</p>
             <p className="pb-5 text-1xl md:text-2xl text-gray-500">{description}</p>
 
-            <p className="text-sm font-semibold text-slate-800"> Tags: <Link href ={`/section/${section}`}>{ section }</Link></p>
+            {/* <p className="text-sm font-semibold text-slate-800"> Tags: <Link href ={`/section/${section}`}>{ section }</Link></p> */}
+            <SectionButton section={section} />
 
             <div className="flex pb-2">
                 <p className="text-base font-light"> by <Link href={`/profile/${authorID}`}> {authorName + " |" } </Link></p>

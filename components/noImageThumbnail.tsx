@@ -2,6 +2,7 @@ import "../styles/global.css"
 import "../styles/links.css"
 
 import {articleBody} from "./ArticleThumbnail"
+import SectionButton from "./SectionButton"
 
 import Link from 'next/link'
 
@@ -15,7 +16,8 @@ const NoImgThumbnail = ({Title, description, section,  authorID, createdAt, id }
                 
                 <Link href={`/article/${id}`} className="text-2xl font-bold text-slate-800">{ Title.length < 100 ? Title : Title.substring(0,97) + "..." }</Link>
 
-                <p className="text-sm font-semibold text-slate-800"><Link href ={`/section/${section}`}>{ section }</Link></p>
+                <SectionButton section={section} />
+               
                 <p className="text-base text-slate-800">{description}</p>
                 <div><p className="text-sm font-semibold text-slate-400">By <Link href={`/profile/${authorID}`}>{ `Author ${authorID}` }</Link> </p></div>
                        

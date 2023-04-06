@@ -30,7 +30,7 @@ export default async function Page({ params,} : any) {
     // makes me wish I knew how to code AHHHHHHHH
     return(
         <div>
-            <h1 className="md:text-4xl text-2xl text-primaryMacaulay font-semibold pt-6 pb-4">Category : {params['section']}</h1>
+            <h1 className="md:text-4xl text-2xl text-primaryMacaulay font-semibold pt-6 pb-4">Category : {decodeURIComponent(params['section'])}</h1>
             <div className="divide-y-2 divide-primaryMacaulay"> {/* for the black line underneath opinion*/}
                 <div></div>
                 <div></div>

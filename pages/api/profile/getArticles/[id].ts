@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { prisma } from '../../../prisma/db' 
+import { prisma } from '../../../../prisma/db' 
 /*
     THIS IS NOT THE FINALIZED VERSION OF THIS, THIS WILL HAVE AUTHENITCATION
     /api/profile/[id]
@@ -22,24 +22,31 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-   if (req.method == "GET") {
+   if (req.method == "POST") {
 
-		const profile = await prisma.userpass.findUnique({
+    
+    let body = JSON.parse(req.body);
+
+    // cleaning values for the db
+    let num : number = body['num'] != undefined && parseInt(body['num'] as string) > 0 ? body['num'] : 10;
+    let start : number = body['start'] != undefined && parseInt(body['start'] as string) >= 0 ? body['start'] : 0;
+    
+		const articles = await prisma.articles.findMany({
 			where: {
-				id : parseInt(req.query['id'] as string)
+				authorID : parseInt(req.query['id'] as string)
 			},
-      select : {
-        id : true,
-        name : true,
-        password : false,
-      }
+      skip : start,
+      take : num, 
 		});
-		if (! profile) {
+
+
+		if (! articles) {
 			// article is null b/c nothing meets the query
-			res.status(200).json({success : true, results : {}});
+			res.status(200).json({success : true, articles : {}});
 		} else {
-			res.status(200).json({success : true, results : profile}); 
+			res.status(200).json({success : true, articles : articles}); 
 		}	
+    
 	} else {
      res.status(400).json({success : false, message : "Error: bad request"});
    }

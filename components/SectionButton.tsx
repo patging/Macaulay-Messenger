@@ -9,14 +9,15 @@ import React from 'react'
 import Link from "next/link"
 
 interface SectionButtonBody {
-    tag : string,
+    section : string,
 }
 
-export default function SectionButton({tag} : SectionButtonBody) {
+export default function SectionButton({section} : SectionButtonBody) {
+
     return (
-        <button className=' bg-primaryMacaulay p-1 group hover:bg-white'>
-            <Link href={`/section/${tag}`}>
-                <h6 className='text-white text-sm group-hover:text-primaryMacaulay'>{tag.toUpperCase()}</h6>
+        <button className=' bg-primaryMacaulay block p-1 group/sub hover:bg-white'>
+            <Link href={`/section/${ encodeURIComponent(section)}`}>
+                <h6 className='text-white text-xs group-hover/sub:text-primaryMacaulay'>{section.toUpperCase()}</h6>
             </Link>
         </button>
     );
