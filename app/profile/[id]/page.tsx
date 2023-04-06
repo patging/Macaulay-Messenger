@@ -1,6 +1,6 @@
 
 import React from 'react'
-import MainpageSmallArticle from '../../../components/MainpageSmallArticle';
+import NoImgThumbnail from '../../../components/noImageThumbnail';
 
 export default async function Page({ params,} : any) {
     
@@ -21,10 +21,21 @@ export default async function Page({ params,} : any) {
     const profile_info = (await prof_resp.json())['results'];
 
     return(
-        <div>
-            <h2 className='text-3xl my-3' >{ profile_info['name'] }</h2>
+        <div className=''>
+            <h2 className='text-4xl my-3' >{ profile_info['name'] }</h2>
+            <hr />
+            <h4 className="text-3xl my-3">Articles</h4>
 
-            {articles.map( (article : any) => <MainpageSmallArticle {...article}/> )}
+            <div className="lg:grid grid-cols-9">
+                <div className="lg:col-span-6">
+                    {articles.map( (article : any) => <NoImgThumbnail {...article}/> )}
+                </div>
+
+                <div className="lg:col-span-3">
+                    
+                </div>
+
+            </div>
 
         </div>
     );
