@@ -1,7 +1,7 @@
 import "../styles/global.css"
 import "../styles/links.css"
 
-import {articleBody, ArticleThumbnail} from '../components/ArticleThumbnail'
+import {articleBody, ArticleThumbnail} from './thumbnails/ArticleThumbnail'
 
 export interface mastHeadBody {
     articles : articleBody[],

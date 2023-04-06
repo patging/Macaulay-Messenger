@@ -3,9 +3,9 @@
 
 */
 import React from 'react'
-import MainpageSmallArticle from '../../../components/MainpageSmallArticle';
-import NoImgThumbnail from '../../../components/noImageThumbnail';
-import { ArticleThumbnail } from '../../../components/ArticleThumbnail';
+import MainpageSmallArticle from '../../../components/thumbnails/MainpageSmallArticle';
+import NoImgThumbnail from '../../../components/thumbnails/noImageThumbnail';
+import { ArticleThumbnail } from '../../../components/thumbnails/ArticleThumbnail';
 import Opinionsidetab from '../../../components/opinionsidetab';
 import Mostread from '../../../components/Mostread';
 
@@ -40,22 +40,25 @@ export default async function Page({ params,} : any) {
                 
 
 
-                <div className="grid grid-cols-7 py-4 divide-x-2">
-                    <div className="col-span-5 pr-2 ">
+                <div className="grid grid-cols-9 py-4 divide-x-2">
+                    <div className="col-span-6 pr-4 ">
                         
                         <NoImgThumbnail Article  {...articles[0]}/>
                         <MainpageSmallArticle Article  {...articles[1]}/>
                         <NoImgThumbnail Article  {...articles[0]}/>
                  
                   
-                        
 
-                        <div className="col-span-2 grid grid-cols-1">
-                            
+                        
                             
                   
-                        </div>
-                    </div> <div></div>
+                    </div>
+                        
+                    <div className="col-span-3 grid grid-cols-1">
+                        <div className="px-2"><Opinionsidetab  articles={articles.slice(0,1)}/></div>
+                        <div className="pt-4 px-1"><Mostread  articles={articles.slice(0,1)}/></div>
+                    </div>
+                </div> <div></div>
             
                 </div>
 
@@ -66,7 +69,7 @@ export default async function Page({ params,} : any) {
 
 
              
-        </div>
+        
     
         
     )

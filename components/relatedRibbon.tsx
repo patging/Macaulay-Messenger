@@ -1,8 +1,8 @@
 import "../styles/global.css"
 import "../styles/links.css"
 
-import NoImgThumbnail from "./noImageThumbnail"
-import {articleBody} from "./ArticleThumbnail"
+import NoImgThumbnail from "./thumbnails/noImageThumbnail"
+import {articleBody} from "./thumbnails/ArticleThumbnail"
 
 interface RibbonBody {
     articles : articleBody[],

@@ -1,8 +1,8 @@
 import "../styles/global.css"
 import "../styles/links.css"
-import { ArticleThumbnail} from '../components/ArticleThumbnail'
+import { ArticleThumbnail} from './thumbnails/ArticleThumbnail'
 import { mastHeadBody } from "./masthead"
-import NoImgThumbnail from "./noImageThumbnail"
+import NoImgThumbnail from "./thumbnails/noImageThumbnail"
 import NavButton from "./NavButton"
 import Link from 'next/link'
 import { articleBody } from "./Opinionpagearticle"
@@ -53,8 +53,7 @@ const Mostread = ({articles} : mastHeadBody) =>{
                         
 
                     <div className="py-2 "><Onlytitlethumbnail {...articles[0]}/></div>
-                    <div className="py-2 "><Onlytitlethumbnail {...articles[1]}/></div>
-                    <div className="py-2 "><Onlytitlethumbnail {...articles[2]}/></div>
+                    
                     <div></div>
             
                 </div>

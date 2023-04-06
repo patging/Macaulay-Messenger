@@ -1,6 +1,6 @@
 
 import React from 'react'
-import MainpageSmallArticle from '../../../components/MainpageSmallArticle';
+import MainpageSmallArticle from '../../../components/thumbnails/MainpageSmallArticle';
 
 export default async function Page({ params,} : any) {
     
