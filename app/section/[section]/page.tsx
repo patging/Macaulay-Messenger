@@ -3,6 +3,11 @@
 
 */
 import React from 'react'
+import MainpageSmallArticle from '../../../components/MainpageSmallArticle';
+import NoImgThumbnail from '../../../components/noImageThumbnail';
+import { ArticleThumbnail } from '../../../components/ArticleThumbnail';
+import Opinionsidetab from '../../../components/opinionsidetab';
+import Mostread from '../../../components/Mostread';
 
 import "../../../styles/global.css"
 import Opinionpagearticle from '../../../components/Opinionpagearticle';
@@ -35,10 +40,37 @@ export default async function Page({
             </div>
             <div className="divide-y-2 divide-gray-200">
                 <h2 className="text-1xl font-semibold pt-2 pb-2">Articles</h2>
-                { articles.map( (article : any) =>  <Opinionpagearticle {...article}/> ) }
-            </div>
+                
+
+
+                <div className="grid grid-cols-7 py-4 divide-x-2">
+                    <div className="col-span-5 pr-2 ">
+                        
+                        <NoImgThumbnail Article  {...articles[0]}/>
+                        <MainpageSmallArticle Article  {...articles[1]}/>
+                        <NoImgThumbnail Article  {...articles[0]}/>
+                 
+                  
+                        
+
+                        <div className="col-span-2 grid grid-cols-1">
+                            
+                            
+                  
+                        </div>
+                    </div> <div></div>
             
+                </div>
+
+
+
+
+            </div>
+
+
+             
         </div>
+    
         
     )
 }

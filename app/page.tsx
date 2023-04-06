@@ -10,7 +10,7 @@ import Mostread from '../components/Mostread'
 
 import Opinionpagearticle from '../components/Opinionpagearticle';
 
-import MainpageSmartArticle from '../components/MainpageSmallArticle'
+import MainpageSmallArticle from '../components/MainpageSmallArticle'
 
 
 /* 
@@ -72,8 +72,8 @@ export default async function page() {
               <div className="grid grid-cols-7 py-4 divide-x-2">
                 <div className="col-span-5 pr-2 ">
                   <div className="divide-y-2"><ArticleThumbnail  {...articles[0]}/> <div></div></div>
-                  <MainpageSmartArticle className="align-left" {...articles[0]}/>
-                  <MainpageSmartArticle {...articles[0]}/>
+                  <MainpageSmallArticle Article className="align-left" {...articles[0]}/>
+                  <MainpageSmallArticle {...articles[0]}/>
                   </div>
 
                 <div className="col-span-2 grid grid-cols-1">
