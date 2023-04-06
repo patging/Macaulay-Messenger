@@ -69,16 +69,16 @@ export default async function page() {
                 <div></div>
               </div>
 
-              <div className="grid grid-cols-7 py-4 divide-x-2">
-                <div className="col-span-5 pr-2 ">
+              <div className="grid grid-cols-9 py-4 divide-x-2">
+                <div className="col-span-6 pr-4 ">
                   <div className="divide-y-2">
-                    <ArticleThumbnail  {...articles[0]}/>
+                    <ArticleThumbnail  {...articles[0]}/> <div></div>
                   </div>
                   <MainpageSmallArticle {...articles[1]}/>
                   <MainpageSmallArticle {...articles[2]}/>
                 </div>
 
-                <div className="col-span-2 grid grid-cols-1">
+                <div className="col-span-3 grid grid-cols-1 pl-2">
                   <div className="px-2"><Opinionsidetab  articles={articles.slice(3,6)}/></div>
                   <div className="pt-4 px-1"><Mostread  articles={articles.slice(6,9)}/></div>
                 </div>

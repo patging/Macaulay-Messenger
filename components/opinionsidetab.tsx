@@ -30,9 +30,9 @@ const Opinionsidetab = ({articles} : mastHeadBody) =>{
                     )}
             </ul>
              
-                <div className="divide-y-2 divide-gray-200  ">
+                <div className="">
            
-                    <div className="py-2 "><ArticleThumbnail {...articles[0]}/></div>
+                    <div className="py-2 divide-y-2"><ArticleThumbnail {...articles[0]}/> <div></div></div>
                     <div className="py-2"><NoImgThumbnail {...articles[1]}/></div>
                     <div className="py-2"><NoImgThumbnail {...articles[2]}/></div>
                     <div></div>
