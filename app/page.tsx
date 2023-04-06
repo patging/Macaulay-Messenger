@@ -8,7 +8,7 @@ import SideTab from '../components/sideTab_MastHead'
 import Opinionsidetab from '../components/opinionsidetab'
 import Mostread from '../components/Mostread'
 
-import Opinionpagearticle from '../components/Opinionpagearticle';
+import SectionButton from '../components/SectionButton'
 
 import MainpageSmartArticle from '../components/MainpageSmallArticle'
 
@@ -74,6 +74,7 @@ export default async function page() {
                   <div className="divide-y-2"><ArticleThumbnail  {...articles[0]}/> <div></div></div>
                   <MainpageSmartArticle className="align-left" {...articles[0]}/>
                   <MainpageSmartArticle {...articles[0]}/>
+
                   </div>
 
                 <div className="col-span-2 grid grid-cols-1">
