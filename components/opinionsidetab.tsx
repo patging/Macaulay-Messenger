@@ -32,7 +32,14 @@ const Opinionsidetab = ({articles} : mastHeadBody) =>{
              
                 <div className="">
            
-                    <div className="py-2 divide-y-2"><ArticleThumbnail {...articles[0]}/> <div></div></div>
+                    <div className="py-2 divide-y">
+
+                        {/*Since each page is going to have a diff amount of articles I added some logic to make the first one have an image then if there are anymore articles to make them not have images*/}
+
+                        <ArticleThumbnail {...articles[0]}/> 
+                        { articles.length > 1 ? articles.slice(1, articles.length).map( (article : any) =>  <NoImgThumbnail {...article}/> ) : <h1>sneed</h1> }
+                        <div></div>
+                    </div>
                     
                     
                     <div></div>

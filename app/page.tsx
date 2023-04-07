@@ -63,22 +63,22 @@ export default async function page() {
               </div>
               */} {/*old plan*/}
               
-              <h1 className="md:text-4xl text-2xl  pt-6 pb-4">BREAKING News</h1>
-              <div className="divide-y-2 divide-gray-200"> {/* for the black line underneath opinion*/}
+              <h1 className="md:text-4xl text-2xl  pt-8 pb-4">BREAKING News</h1>
+              <div className="divide-y-2"> {/* for the black line underneath opinion*/}
                 <div></div>
                 <div></div>
               </div>
 
-              <div className="lg:grid grid-cols-9 py-4 divide-x-2 ">
-                <div className="col-span-6 pr-4 ">
-                  <div className="divide-y-2">
+              <div className="lg:grid grid-cols-12 py-4 divide-x ">
+                <div className="col-span-8 pr-4 ">
+                  <div className="divide-y">
                     <ArticleThumbnail {...articles[0]} hasImage={false} /> <div></div>
                   </div>
                   <MainpageSmallArticle {...articles[1]}/>
                   <MainpageSmallArticle {...articles[2]}/>
                 </div>
 
-                <div className="col-span-3 grid grid-cols-1 pl-2 invisible lg:visible">
+                <div className="col-span-4 grid grid-cols-1 pl-2 invisible lg:visible">
                   <div className="px-2"><Opinionsidetab  articles={articles.slice(3,6)}/></div>
                   <div className="pt-4 px-1"><Mostread  articles={articles.slice(6,9)}/></div>
                 </div>

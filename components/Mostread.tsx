@@ -10,7 +10,7 @@ import { articleBody } from "./Opinionpagearticle"
 
 const Onlytitlethumbnail = ({Title, id } : articleBody) => {
     return(
-        <div className="group relative md:container mx-auto w-96 overflow-hidden rounded-[16px] p-[1px]">
+        <div className="group relative md:container mx-auto w-96 overflow-hidden p-[1px]">
           
           <div className="relative bg-white p-6">
               <div className="space-y-2">
@@ -49,10 +49,10 @@ const Mostread = ({articles} : mastHeadBody) =>{
                     )}
             </ul>
              
-                <div className="divide-y-2 divide-gray-200  ">
+                <div className="divide-y">
                         
 
-                    <div className="py-2 "><Onlytitlethumbnail {...articles[0]}/></div>
+                    { articles.map( (article : any) =>  <Onlytitlethumbnail {...article}/> ) }
                     
                     <div></div>
             

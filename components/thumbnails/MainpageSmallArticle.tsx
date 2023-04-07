@@ -17,17 +17,17 @@ const MainpageSmallArticle = ({Title, description, section,  authorID, createdAt
     return(
         <div className="group relative md:container mx-auto w-96 overflow-hidden rounded-[16px] p-[1px]">
           
-          <div className="relative bg-white pt-4 lg:grid grid-cols-3">
+          <div className="relative bg-white pt-4 lg:grid grid-cols-12">
 
 
             
                 
                 
-                <Link href={`/article/${id}`}>
-                    <img className="aspect-[4/3] object-cover lg:w-96 px-1" src="https://www.amtrakvacations.com/sites/amtrak/files/styles/hero/public/images/Destination-Yosemite.jpg?h=3a3df0c5&itok=rGMyppyy" alt="" />
+                <Link className="col-span-5" href={`/article/${id}`}>
+                    <img className="aspect-[4/3] object-scale-down lg:w-96 pr-2" src="https://www.amtrakvacations.com/sites/amtrak/files/styles/hero/public/images/Destination-Yosemite.jpg?h=3a3df0c5&itok=rGMyppyy" alt="" />
                 </Link> 
                 
-                <div className="col-span-2 divide-y-2 ">
+                <div className=" pl-2 col-span-7 divide-y-2 ">
                     <div className="pb-6">
                     <Link href={`/article/${id}`} className="text-2xl font-bold text-slate-800">{ Title.length < 100 ? Title : Title.substring(0,97) + "..." }</Link>
 
